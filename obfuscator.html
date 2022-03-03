@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LogMetrics - Obfuscator Framework</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="LogMetrics - Obfuscator Framework">
+    <meta name="description"
+          content="Obfuscator Framework provides simplified configuration to obfuscate the sensitive field while logging the data.">
+    <meta name="keywords"
+          content="LogMetrics,LogMetrics,LogMetrics.org,LogMetrics, Obfuscator for Java Projects">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Devxchange.io">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154410551-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154410551-1');
+
+    </script>
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">DEVXCHANGE.IO</span>
+                        </a>
+                    </h1>
+
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Obfuscator Framework</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon_datareport_alt"></i> Obfuscator Framework</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Nov 23th, 2019</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">General</h2>
+                                <div class="section-block">
+                                    <p>Obfuscator Framework - mask the sensitive fields using MD5 , SHA258 , Fixed
+                                        Mask and Matched Mask.
+                                    </p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Java</h2>
+                                <div class="section-block">
+                                    <p>Obfuscator framework provides simplified configuration to obfuscate the
+                                        sensitive field while logging the data for java projects</p>
+                                </div><!--//section-block-->
+                                <div id="repo" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Repository</h6>
+                                        <pre><code class="language-javascript"> maven { url "https://dl.bintray.com/m2/release/"}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="dependency" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Dependency- Gradle</h6>
+                                        <pre><code class="language-javascript">compile ("io.devxchange:obfuscator:0.0.1")</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="MD5" class="section-block">
+                                    <div class="code-block">
+                                        <h6>MD5</h6>
+                                        <pre><code class="language-javascript">Usage
+============
+//Fields to obfuscated
+Set<String> items = new HashSet<>();
+items.add("name");
+items.add("salary");
+items.add("age");
+
+Map<String, Set<String>> obfuscatorMap= new HashMap<>();
+obfuscatorMap.put("md5", items);
+// obfuscate json object
+String response = Obfuscator.obfuscateJsonString(simpleJson,obfuscatorMap);
+// obfuscate XML object
+String response = Obfuscator.obfuscateXmlString(simpleXML,obfuscatorMap);
+
+Input
+=====
+{"id":1,"name":"karthik","age":29,"salary":115000}
+
+Output - MD5 Encrypted Response
+=================================
+{
+  "id": 1,
+  "name": "02adcec2263d2127269fcd769c33f029",
+  "age": "6ea9ab1baa0efb9e19094440c317e21b",
+  "salary": "560c237ab6f39688c4c45dc23e0d494e"
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="SHA256" class="section-block">
+                                    <div class="code-block">
+                                        <h6>SHA256</h6>
+                                        <pre><code class="language-javascript">Usage
+============
+//Fields to obfuscated
+Set<String> items = new HashSet<>();
+items.add("name");
+items.add("salary");
+items.add("age");
+
+Map<String, Set<String>> obfuscatorMap= new HashMap<>();
+obfuscatorMap.put("sha256", items);
+// obfuscate json object
+String response = Obfuscator.obfuscateJsonString(simpleJson,obfuscatorMap);
+// obfuscate XML object
+String response = Obfuscator.obfuscateXmlString(simpleXML,obfuscatorMap);
+
+Input
+=====
+{"id":1,"name":"karthik","age":29,"salary":115000}
+
+Output - SHA256 Encrypted Response
+=================================
+{
+  "id": 1,
+  "name": "63b7cc6dd0c192e8f73170629701879816156027e44bbee145a7a8456a9a3517",
+  "age": "35135aaa6cc23891b40cb3f378c53a17a1127210ce60e125ccf03efcfdaec458",
+  "salary": "f190a3d0c04e5b2b3f4ee16d2df26597720b8d1c09179d2a0dad7e4605776875"
+}
+</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="FixedMask" class="section-block">
+                                    <div class="code-block">
+                                        <h6>FixedMask</h6>
+                                        <pre><code class="language-javascript">Usage
+============
+//Fields to obfuscated
+Set<String> items = new HashSet<>();
+items.add("name");
+items.add("salary");
+items.add("age");
+
+Map<String, Set<String>> obfuscatorMap= new HashMap<>();
+obfuscatorMap.put("fixedMask", items);
+// obfuscate json object
+String response = Obfuscator.obfuscateJsonString(simpleJson,obfuscatorMap);
+// obfuscate XML object
+String response = Obfuscator.obfuscateXmlString(simpleXML,obfuscatorMap);
+
+Input
+=====
+{"id":1,"name":"karthik","age":29,"salary":115000}
+
+Output - Fixed Mask Response
+=======================================
+{
+  "id": 1,
+  "name": "********",
+  "age": "********",
+  "salary": "********"
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="MatchedMask" class="section-block">
+                                    <div class="code-block">
+                                        <h6>MatchedMask</h6>
+                                        <pre><code class="language-javascript">Usage
+============
+//Fields to obfuscated
+Set<String> items = new HashSet<>();
+items.add("name");
+items.add("salary");
+items.add("age");
+
+Map<String, Set<String>> obfuscatorMap= new HashMap<>();
+obfuscatorMap.put("matchedMask", items);
+// obfuscate json object
+String response = Obfuscator.obfuscateJsonString(simpleJson,obfuscatorMap);
+// obfuscate XML object
+String response = Obfuscator.obfuscateXmlString(simpleXML,obfuscatorMap);
+
+Input
+=====
+{"id":1,"name":"karthik","age":29,"salary":115000}
+
+Output - Matched Mask Response
+=================================
+{
+  "id": 1,
+  "name": "*******",
+  "age": "**",
+  "salary": "******"
+}</code></pre></div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#download-section">General</a>
+	                                <a class="nav-link scrollto" href="#code-section">Java</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#repo">Repository</a>
+                                        <a class="nav-link scrollto" href="#dependency">Dependency</a>
+                                        <a class="nav-link scrollto" href="#MD5">MD5</a>
+                                        <a class="nav-link scrollto" href="#SHA256">SHA256</a>
+                                        <a class="nav-link scrollto" href="#FixedMask">FixedMask</a>
+                                        <a class="nav-link scrollto" href="#MatchedMask">MatchedMask</a>
+                                    </nav><!--//nav-->
+	                            </nav><!--//doc-menu-->
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    </div><!--//page-wrapper-->
+
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright">Copyright © 2019 DevXchange.io</small><br>
+            <small class="copyright">Theme by <a href ="https://themes.3rdwavemedia.com/" target="_blank">3rd
+                Wave Media</a></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
+

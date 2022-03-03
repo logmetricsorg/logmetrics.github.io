@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://logmetrics.org/</title>
+  <link>http://logmetrics.org/</link>
+
+<item>
+     <link>http://logmetrics.org/</link>
+     <title>logmetrics.org</title>
+     <description>Building open source tools and frameworks for developers</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://logmetrics.org/logmetrics.html</link>
+     <title>Devxchange - LogMetrics Framework</title>
+     <description>Devxchange - LogMetrics Framework</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://logmetrics.org/contact.html</link>
+     <title>Devxchange - Contact</title>
+     <description>Devxchange - Contact</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://logmetrics.org/index.html</link>
+     <title>logmetrics.org</title>
+     <description>Building open source tools and frameworks for developers</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
